@@ -1,6 +1,6 @@
 import csv
 
-DATA_DIR = 'work/data'
+DATA_DIR = 'data'
 CSV_FILENAME = 'csv_sample.csv'
 filename = DATA_DIR + '/' + CSV_FILENAME
 

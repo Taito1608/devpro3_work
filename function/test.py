@@ -3,13 +3,14 @@ import time
 import socket
 import threading
 import json
-import data_csv
 
-SERVER = 'localhost'
+#SERVER = 'localhost'
+SERVER = '127.0.0.1'
 WAITING_PORT = 8765
 KEY_ID = 'takemoto'
 
 LOOP_INTERVAL = 5
+data
 
 def server_test(server_v1=SERVER, waiting_port_v1=WAITING_PORT):
 
@@ -27,9 +28,6 @@ def server_test(server_v1=SERVER, waiting_port_v1=WAITING_PORT):
                 for entry in data_r_list:
                     print(f"Temperature: {entry['temperature']}  Humidity: {entry['humidity']}")
                 print('__ from the client. ' + str(client_address1))
-
-                data_csv.csv_write_iterator(data_r_list)
-                
             except json.JSONDecodeError:
                 print('Failed to decode JSON:', data_r_str)
 
